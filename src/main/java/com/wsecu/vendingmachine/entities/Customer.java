@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -26,5 +25,5 @@ public class Customer implements Serializable {
     @Column
     String customerEmail;
     @OneToMany(mappedBy="customer")
-    Set<Payment> customerPayment;
+    Payment customerPayment;
 }

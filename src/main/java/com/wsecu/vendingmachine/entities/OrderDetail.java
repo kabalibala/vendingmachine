@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,7 +21,7 @@ public class OrderDetail implements Serializable {
     @Column
     Date orderDate;
     @OneToMany(mappedBy="order")
-    Set<OrderProduct> product;
+    List<OrderProduct> product;
     @Column
     double orderTotal;
     @ManyToOne
